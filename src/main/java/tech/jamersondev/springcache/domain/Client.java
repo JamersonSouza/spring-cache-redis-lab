@@ -18,6 +18,11 @@ public class Client {
     public Client() {
     }
 
+    public Client(ClientDTO clientDTO) {
+        this.name = clientDTO.name();
+        this.email = clientDTO.email();
+    }
+
     public UUID getClientId() {
         return clientId;
     }

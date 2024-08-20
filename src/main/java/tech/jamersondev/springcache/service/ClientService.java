@@ -15,10 +15,12 @@ public class ClientService {
     public ClientService(ClientRepository clientRepository) {
         this.clientRepository = clientRepository;
     }
-
-    public List<ClientDTO> listClients(){
+    public Client create(ClientDTO clientDTO){
+        Client client = new Client(clientDTO);
+       return this.clientRepository.save(client);
+    }
+    public List<Client> listClients(){
         List<Client> allClients = this.clientRepository.findAll();
-        
         return allClients;
     }
 }
