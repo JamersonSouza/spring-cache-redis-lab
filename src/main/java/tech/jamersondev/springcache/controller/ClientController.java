@@ -6,12 +6,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 import tech.jamersondev.springcache.domain.Client;
 import tech.jamersondev.springcache.domain.ClientDTO;
-import tech.jamersondev.springcache.repository.ClientRepository;
 import tech.jamersondev.springcache.service.ClientService;
 
 import java.net.URI;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/client")
